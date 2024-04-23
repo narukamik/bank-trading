@@ -33,7 +33,7 @@ namespace bank_trading.Domain
                 if (Value >= 1000000)
                     return "HIGHRISK";
                 else
-                    return "LOWRISK";
+                    return "UNKNOWNRISK";
             }
         }
     }
