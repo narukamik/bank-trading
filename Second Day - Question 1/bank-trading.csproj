@@ -8,10 +8,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Infra\obj\**" />
-    <EmbeddedResource Remove="Infra\obj\**" />
-    <None Remove="Infra\obj\**" />
-  </ItemGroup>
-
 </Project>

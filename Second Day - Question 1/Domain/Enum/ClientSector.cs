@@ -9,6 +9,7 @@ namespace bank_trading.Domain.Enum
     public enum ClientSector
     {
         Public,
-        Private
+        Private,
+        PEP
     }
 }

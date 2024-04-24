@@ -1,0 +1,30 @@
+I'd add the IsPoliticallyExposed property to the class and add
+an if clause in the GetPropertyMethod assigning the PEP category
+when it's true.
+
+Something like this:
+
+ if (DaysSincePaymentExpired > 30)
+     return "EXPIRED";
+
+ if (IsPoliticallyExposed)
+     return TradeRisk.PEP;
+
+ if (ClientSector == ClientSector.Private)
+ {
+     if (Value > 1000000)
+         return TradeRisk.HIGHRISK;
+     else
+         return TradeRisk.UNKNOWNRISK;
+ }
+ else if (ClientSector == ClientSector.Public)
+ {
+     if (Value > 1000000)
+         return TradeRisk.MEDIUMRISK;
+     else
+         return TradeRisk.UNKNOWNRISK;
+ }
+ else // There is no other scenario. This is only here for readability.
+ {
+     return TradeRisk.UNKNOWNRISK;
+ }
